@@ -239,7 +239,7 @@
               class="collapse navbar-collapse flex flex-grow items-center"
               id="navbarSupportedContent"
             >
-              <a
+              <nuxt-link to="/"
                 class="
                   flex
                   items-center
@@ -250,7 +250,7 @@
                   lg:mt-0
                   mr-1
                 "
-                href="#"
+                
               >
                 <img
                   src="https://www.tsoft.com.tr/assets/images/logo/tsoft-logo-tr.svg"
@@ -258,7 +258,7 @@
                   alt=""
                   loading="lazy"
                 />
-              </a>
+              </nuxt-link>
               <!-- Left links -->
               <ul class="navbar-nav flex pl-0 list-style-none mr-auto">
                 <li class="nav-item p-2">

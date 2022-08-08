@@ -1,3 +1,8 @@
+# proje çalıştırma komutları
+# json-server --watch db.json (fake api hep çalışmalıdır )
+# npm run dev
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.

@@ -1,8 +1,9 @@
 import axios from 'axios'
 
 export default async(endpoint, method, body) => {
+    const runtimeConfig = useRuntimeConfig()
     const config = {
-        url: "http://localhost:3000" + endpoint,
+        url: runtimeConfig.public.apiBase + endpoint,
         method,
         data: body
     }
