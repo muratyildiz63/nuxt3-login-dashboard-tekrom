@@ -1,0 +1,27 @@
+{
+    "home": "Home",
+    "our_staff": "Our Staff",
+    "Our_references": "Our references",
+    "language": "Language",
+    "comments": "Comment",
+    "close": "Close",
+    "logout": "Logout",
+    "e-mail": "E-mail",
+    "message": "Message",
+    "total": "Total",
+    "commentList": "Comments are Listed",
+    "username": "User Name",
+    "name": "Name",
+    "surname": "Surname",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register",
+    "ErorLogin": "Wrong Username or Password!!!",
+    "login_successful": "Login Successful",
+    "User_login": "User Login",
+    "registration_uccessful": "Registration Successful"
+
+
+
+
+}

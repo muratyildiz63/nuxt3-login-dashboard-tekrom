@@ -31,7 +31,7 @@
                       text-left
                     "
                   >
-                    İsim
+                    {{$t('name')}}
                   </th>
                   <th
                     scope="col"
@@ -44,7 +44,7 @@
                       text-left
                     "
                   >
-                    email
+                     {{$t('e-mail')}}
                   </th>
                   <th
                     scope="col"
@@ -57,7 +57,7 @@
                       text-left
                     "
                   >
-                    Mesaj
+                  {{$t('message')}}
                   </th>
                 </tr>
               </thead>
@@ -70,7 +70,7 @@
               </tbody>
             </table>
 
-            <div>Toplam {{ commentData.length }} yorum listeleniyor</div>
+            <div>{{$t('total')}} {{ commentData.length }} {{$t('commentList')}}</div>
           </div>
         </div>
       </div>

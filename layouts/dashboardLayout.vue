@@ -50,11 +50,12 @@
               data-mdb-ripple="true"
               data-mdb-ripple-color="primary"
             >
-              <span>Anasayfa</span>
+              <span>{{ $t('home') }}</span>
             </nuxt-link>
           </li>
           <li class="relative" id="sidenavSecEx2">
-            <nuxt-link to="/referencePage"
+            <nuxt-link
+              to="/referencePage"
               class="
                 flex
                 items-center
@@ -79,9 +80,42 @@
               aria-expanded="false"
               aria-controls="collapseSidenavSecEx2"
             >
-              <span>Reeranslarımız</span>
+              <span>{{ $t('Our_references') }}</span>
             </nuxt-link>
           </li>
+           <li class="relative" id="sidenavSecEx2">
+            <nuxt-link
+              to="/commentPage"
+              class="
+                flex
+                items-center
+                text-sm
+                py-4
+                px-6
+                h-12
+                overflow-hidden
+                text-gray-700 text-ellipsis
+                whitespace-nowrap
+                rounded
+                hover:text-blue-600 hover:bg-blue-50
+                transition
+                duration-300
+                ease-in-out
+                cursor-pointer
+              "
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="primary"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSidenavSecEx2"
+              aria-expanded="false"
+              aria-controls="collapseSidenavSecEx2"
+            >
+              <span>{{ $t('comments') }}</span>
+            </nuxt-link>
+          </li>
+
+
+
           <li class="relative" id="sidenavSecEx3">
             <nuxt-link
               to="/personnelPage"
@@ -109,69 +143,13 @@
               aria-expanded="false"
               aria-controls="collapseSidenavSecEx3"
             >
-              <span>Çalışanlarımız</span>
+              <span>{{ $t('our_staff') }}</span>
             </nuxt-link>
-            <ul
-              class="relative accordion-collapse collapse"
-              id="collapseSidenavSecEx3"
-              aria-labelledby="sidenavSecEx3"
-              data-bs-parent="#sidenavSecExample"
-            >
-              <li class="relative">
-                <a
-                  href="#!"
-                  class="
-                    flex
-                    items-center
-                    text-xs
-                    py-4
-                    pl-12
-                    pr-6
-                    h-6
-                    overflow-hidden
-                    text-gray-700 text-ellipsis
-                    whitespace-nowrap
-                    rounded
-                    hover:text-blue-600 hover:bg-blue-50
-                    transition
-                    duration-300
-                    ease-in-out
-                  "
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="primary"
-                  >En Deneyimli</a
-                >
-              </li>
-              <li class="relative">
-                <a
-                  href="#!"
-                  class="
-                    flex
-                    items-center
-                    text-xs
-                    py-4
-                    pl-12
-                    pr-6
-                    h-6
-                    overflow-hidden
-                    text-gray-700 text-ellipsis
-                    whitespace-nowrap
-                    rounded
-                    hover:text-blue-600 hover:bg-blue-50
-                    transition
-                    duration-300
-                    ease-in-out
-                  "
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="primary"
-                  >En Başarılı</a
-                >
-              </li>
-            </ul>
+          
           </li>
         </ul>
 
-        <div class="menuClose" @click="menuShow = !menuShow">Kapat</div>
+        <div class="menuClose" @click="menuShow = !menuShow">{{ $t('close') }}</div>
       </div>
     </div>
     <div class="w-full transition-all">
@@ -239,7 +217,8 @@
               class="collapse navbar-collapse flex flex-grow items-center"
               id="navbarSupportedContent"
             >
-              <nuxt-link to="/"
+              <nuxt-link
+                to="/"
                 class="
                   flex
                   items-center
@@ -250,7 +229,6 @@
                   lg:mt-0
                   mr-1
                 "
-                
               >
                 <img
                   src="https://www.tsoft.com.tr/assets/images/logo/tsoft-logo-tr.svg"
@@ -262,8 +240,8 @@
               <!-- Left links -->
               <ul class="navbar-nav flex pl-0 list-style-none mr-auto">
                 <li class="nav-item p-2">
-                  <nuxt-link  
-                     to="/personnelPage"
+                  <nuxt-link
+                    to="/personnelPage"
                     class="
                       nav-link
                       text-gray-500
@@ -271,10 +249,12 @@
                       focus:text-gray-700
                       p-0
                     "
-                  >Personellerimiz</nuxt-link>
+                    >{{ $t('our_staff') }}</nuxt-link
+                  >
                 </li>
                 <li class="nav-item p-2">
-                  <nuxt-link to="/commentPage"
+                  <nuxt-link
+                    to="/commentPage"
                     class="
                       nav-link
                       text-gray-500
@@ -283,10 +263,12 @@
                       p-0
                     "
                     href="#"
-                    >Yorumlar</nuxt-link                  >
+                    >{{ $t('comments') }}</nuxt-link
+                  >
                 </li>
                 <li class="nav-item p-2">
-                  <nuxt-link to="/referencePage"
+                  <nuxt-link
+                    to="/referencePage"
                     class="
                       nav-link
                       text-gray-500
@@ -294,14 +276,21 @@
                       focus:text-gray-700
                       p-0
                     "
-                 
-                    >Referanslarımız</nuxt-link >
+                    >{{ $t('Our_references') }}</nuxt-link
+                  >
                 </li>
               </ul>
               <!-- Left links -->
             </div>
-
-            <button @click="logout">Çıkış Yap</button>
+        
+            <form>
+              <label class=" px-2" for="locale-select">{{ $t("language") }}: </label> 
+              <select class="w-12 border border-indigo-600 p-1 inline-block" id="locale-select" v-model="$i18n.locale">
+                      <option value="en">en</option>
+                       <option value="tr">tr</option>          
+              </select>
+            </form>
+            <button class="bg-sky-900 p-2 rounded-lg ml-5 text-white" @click="logout">{{$t('logout')}}</button>
 
             <!-- Collapsible wrapper -->
           </div>
@@ -338,38 +327,34 @@
   </div>
 </template>
 <script setup>
+import sessionControl from "../middlewares/sessionControl";
+import apiRequest from "../services/apiRequest";
 
 
 
-import sessionControl from '../middlewares/sessionControl'
-import apiRequest from '../services/apiRequest'
-sessionControl.sessionControl()
-    let userID = ref(null)
-    let  userName= ref('')
-    let name= ref('')
-    let  surname=ref('')
-    let  inlogin =ref(false)
-    let  menuShow =ref(false)
+sessionControl.sessionControl();
+let userID = ref(null);
+let userName = ref("");
+let name = ref("");
+let surname = ref("");
+let inlogin = ref(false);
+let menuShow = ref(false);
 
-    
-    userID = localStorage.getItem('userID')
+userID = localStorage.getItem("userID");
 
-     console.log(localStorage.getItem('userID'))
+console.log(localStorage.getItem("userID"));
 
-    apiRequest(`/user?id=${userID}`, 'GET').then((resUser) => {
-      if (resUser.length > 0) {
-        name.value = resUser[0].name
-        surname.value = resUser[0].surname
-        userName.value = resUser[0].username
-        inlogin.value = true
-      }
-    })
+apiRequest(`/user?id=${userID}`, "GET").then((resUser) => {
+  if (resUser.length > 0) {
+    name.value = resUser[0].name;
+    surname.value = resUser[0].surname;
+    userName.value = resUser[0].username;
+    inlogin.value = true;
+  }
+});
 
-
-    const logout=()=> {
-      localStorage.removeItem('userID')
-      sessionControl.sessionControl()
-    }
-  
-
+const logout = () => {
+  localStorage.removeItem("userID");
+  sessionControl.sessionControl();
+};
 </script>

@@ -1,0 +1,22 @@
+{
+    "home": "Anasayfa",
+    "our_staff": "personellerimiz",
+    "Our_references": "Referanslarımız",
+    "language": "Dil",
+    "comments": "Yorumlar",
+    "close": "Kapat",
+    "logout": "Çıkış Yap",
+    "e-mail": "e-mail",
+    "message": "Mesaj",
+    "total": "Toplam",
+    "commentList": "yorum listeleniyor",
+    "username": "Kullanıcı Adı",
+    "name": "İsim",
+    "surname": "Soyisim",
+    "password": "Şifre",
+    "login": "Giriş Yap",
+    "register": "Üye Ol",
+    "ErorLogin": "Hatalı Kullanıcı Adı veya Şifre",
+    "login_successful": "Giriş Başarılı",
+    "User_login": "Kullancı Girişi"
+}

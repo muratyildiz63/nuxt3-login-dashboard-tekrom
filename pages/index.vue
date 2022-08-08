@@ -6,7 +6,7 @@
       </div>
       <div class="w-1/2 flex">
         <div class="w-2/3">
-          <h1 class="flex justify-center my-4">Personelleriniz</h1>
+          <h1 class="flex justify-center my-4">{{ $t('our_staff') }}</h1>
           <PersonnelInfo
             v-for="(personnel, index) in personnelData"
             :key="index"
@@ -14,7 +14,7 @@
           />
         </div>
         <div class="w-1/3">
-          <h1 class="flex justify-center my-4">Referanslarımız</h1>
+          <h1 class="flex justify-center my-4">{{ $t('Our_references') }}</h1>
           <ReferenceCustumer
             v-for="(reference, index) in referenceData"
             :key="index"
