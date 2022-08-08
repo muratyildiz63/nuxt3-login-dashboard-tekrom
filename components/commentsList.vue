@@ -79,20 +79,13 @@
 </template>
 
 
-<script>
+<script setup>
 import axios from "axios";
 import CommnetTableBody from "./commnetTableBody.vue";
-export default {
-  components: { CommnetTableBody },
-  data() {
-    return {
-      commentData: [],
-    };
-  },
-  mounted() {
+   let commentData=ref([])
     axios.get("https://jsonplaceholder.typicode.com/comments").then((res) => {
-      this.commentData = res.data;
+    commentData.value = res.data;
+    commentData.value.length=70
     });
-  },
-};
+
 </script>

@@ -27,6 +27,9 @@
 </template>
 
 <script setup>
+
+
+
 import dashboardLayout from "../layouts/dashboardLayout";
 import PersonnelPage from "./personnelPage.vue";
 import apiRequest from "../services/apiRequest";
@@ -41,4 +44,6 @@ let referenceData = ref([]);
 apiRequest("/reference", "GET").then((res) => {
   referenceData.value = res;
 });
+
+
 </script>
