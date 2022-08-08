@@ -262,8 +262,8 @@
               <!-- Left links -->
               <ul class="navbar-nav flex pl-0 list-style-none mr-auto">
                 <li class="nav-item p-2">
-                  <nuxt-link
-                    to="loginPage"
+                  <nuxt-link  
+                     to="/personnelPage"
                     class="
                       nav-link
                       text-gray-500
@@ -271,7 +271,7 @@
                       focus:text-gray-700
                       p-0
                     "
-                  ></nuxt-link>
+                  >Personellerimiz</nuxt-link>
                 </li>
                 <li class="nav-item p-2">
                   <nuxt-link to="/commentPage"
@@ -286,7 +286,7 @@
                     >Yorumlar</nuxt-link                  >
                 </li>
                 <li class="nav-item p-2">
-                  <a
+                  <nuxt-link to="/referencePage"
                     class="
                       nav-link
                       text-gray-500
@@ -294,9 +294,8 @@
                       focus:text-gray-700
                       p-0
                     "
-                    href="#"
-                    >Projeler</a
-                  >
+                 
+                    >Referanslarımız</nuxt-link >
                 </li>
               </ul>
               <!-- Left links -->
